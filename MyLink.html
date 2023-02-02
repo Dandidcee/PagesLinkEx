@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Lobster', cursive;
+        text-align: center;
+        background-image: url(https://source.unsplash.com/featured/?gradient);
+        background-size: cover;
+      }
+      h1 {
+        overflow: hidden;
+        white-space: nowrap;
+        animation: type 3s steps(50, end), blink-caret .5s step-end infinite;
+        color: orangered;
+      }
+      @keyframes type {
+        from { 
+          width: 0;
+        }
+        to { 
+          width: 100%; 
+        }
+      }
+      @keyframes blink-caret {
+        from, to { 
+          border-color: transparent; 
+        }
+        50% { 
+          border-color: black; 
+        }
+      }
+      .links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+      }
+      .link {
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        border-radius: 50%;
+        border: 2px solid blue;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation: bounceIn 1s;
+      }
+      .link i {
+        font-size: 50px;
+        margin-bottom: 10px;
+      }
+      .link a {
+        text-decoration: none;
+        color: blue;
+      }
+      @keyframes bounceIn {
+        from {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Links</h1>
+    <div class="links">
+      <div class="link">
+        <i class="fa fa-facebook-square"></i>
+        <a href="#">Link 1</a>
+      </div>
+      <div class="link">
+        <i class="fa fa-twitter-square"></i>
+        <a href="#">Link 2</a>
+      </div>
+      <div class="link">
+        <i class="fa fa-instagram"></i>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+  </body>
+</html>
